@@ -1,0 +1,119 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* General page style */
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Cover page style */
+#cover h1 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#cover button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#cover button:hover {
+  background-color: #155cbe;
+}
+
+/* Card container for login/register */
+.page h2 {
+  color: #1877f2;
+  margin-bottom: 20px;
+}
+
+/* Card box */
+form, .form-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* Buttons */
+button {
+  padding: 12px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #155cbe;
+}
+
+/* Space between buttons */
+.page button + button {
+  margin-top: 8px;
+}
+
+/* Dashboard styles */
+#dashboard h2,
+#dashboard p {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .form-box {
+      padding: 20px;
+  }
+
+  #cover h1 {
+      font-size: 28px;
+      text-align: center;
+  }
+}

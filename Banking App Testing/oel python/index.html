@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banking App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Cover Page -->
+  <section id="cover" class="page" style="background-image: url('coverpage.jpg');">
+    <h1>Welcome to the Banking System!</h1>
+    <button onclick="showPage('register')">Let's Start</button>
+  </section>
+
+  <!-- Registration Page -->
+  <section id="register" class="page" style="background-image: url('bank.jpg'); display: none;">
+    <h2>Register</h2>
+    <input type="text" id="reg_username" placeholder="Username" />
+    <br>
+    <input type="password" id="reg_password" placeholder="Password" />
+    <br>
+    <input type="text" id="reg_account" placeholder="Account Number (10 digits)" />
+    <br>
+    <input type="password" id="reg_pin" placeholder="PIN (4 digits)" />
+    <br>
+    <button onclick="register()">Register</button>
+    <br>
+    <button onclick="showPage('cover')">Go Back</button>
+    <br>
+    <button onclick="showPage('login')">Already have an account? Login</button>
+  </section>
+
+  <!-- Login Page -->
+  <section id="login" class="page" style="background-image: url('bank2.jpg'); display: none;">
+    <h2>Login</h2>
+    <input type="text" id="login_username" placeholder="Username" />
+    <br>
+    <input type="password" id="login_password" placeholder="Password" />
+    <br>
+    <input type="text" id="login_account" placeholder="Account Number" />
+    <br>
+    <input type="password" id="login_pin" placeholder="PIN" />
+    <br>
+    <button onclick="login()">Login</button>
+    <br>
+    <button onclick="showPage('cover')">Go Back</button>
+    <button onclick="showPage('register')">Don't have an account? Register</button>
+  </section>
+
+  <!-- Dashboard Page -->
+  <section id="dashboard" class="page" style="background-image: url('bank2.jpg'); display: none;">
+    <h2 id="welcome">Welcome, Guest</h2>
+    <p id="balance">Balance: $0</p>
+
+    <input type="text" id="deposit_amount" placeholder="Deposit Amount" /><br>
+    <button onclick="deposit()">Deposit</button><br>
+
+    <input type="text" id="withdraw_amount" placeholder="Withdraw Amount" /><br>
+    <button onclick="withdraw()">Withdraw</button><br>
+
+    <input type="text" id="transfer_to" placeholder="Recipient Username" /><br>
+    <input type="text" id="transfer_amount" placeholder="Transfer Amount" /><br>
+    <button onclick="transfer()">Transfer</button><br>
+    <button onclick="logout()">Logout</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
